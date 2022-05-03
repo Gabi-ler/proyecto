@@ -15,7 +15,8 @@
 }
 /* <<<<<------HEADER------>>>>> */
 .header{
-    background-color: #211F20; 
+    /* background-color: #211F20;  */
+    background-image: linear-gradient(black, darkgrey);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -117,11 +118,30 @@
 }
 
 .imagenes-productos a img{
+    border-radius: 10px;
     width: 280px;
     height: 220px;
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: 1,3s;
+}
+
+.imagenes-productos>div img:hover{
+    /* transform: scale(1.1) */
+    animation: changeStyle 3s;
+}
+
+@keyframes changeStyle{
+    0%{
+        transform: scale(1.1);
+}
+    50%{
+        border-radius: 50%;
+}
+    100%{
+        border-radius:10px;
+}
 }
 
 .imagenes-productos p{
@@ -156,6 +176,7 @@
 }
 
 .maps-datos iframe {
+    border-radius: 15px;
     width: 430px;
     height: 330px;
 }
@@ -177,7 +198,8 @@
 
 /*----------- FOOTER----------- */
 .footer {
-    background-color:#211F20;
+    /* background-color:#211F20; */
+    background-image: linear-gradient(to bottom, darkgrey, black);
     color: aliceblue;
     text-align: center;
     grid-area: pie-de-pagina;
@@ -202,6 +224,12 @@
     text-decoration: none;
     text-transform: uppercase;
 }
+.footer nav ul li a:hover{
+    color: deepskyblue;
+    text-shadow: none;
+    transition: 1s;
+}
+
 
 .logo-footer{
     margin-left: 35px;
@@ -214,11 +242,29 @@
 
 .redes-sociales {
     margin-right: 30px;
+    display: flex;
 }
 
 .redes-sociales a img{
-    margin-right: 15px;
+    display: inline;
+    transition: all 1,5s;
+    margin-right: 20px;
 } 
+
+/* .ig:hover a img{
+    transform: scale(1.4);
+}
+
+.fb:hover a img{
+    transform: scale(1.4);
+}
+
+.lkd:hover a img{
+    transform: scale(1.4);
+} */
+.redes-sociales>div:hover{
+    transform: scale(1.4);
+}
 
 /* MAIN hogar */
 
