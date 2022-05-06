@@ -14,8 +14,7 @@
     "pie-de-pagina pie-de-pagina"; 
 }
 /* <<<<<------HEADER------>>>>> */
-.header{
-    /* background-color: #211F20;  */
+/* .header{
     background-image: linear-gradient(black, darkgrey);
     display: flex;
     justify-content: space-between;
@@ -52,8 +51,28 @@
     color: deepskyblue;
     text-shadow: none;
     transition: 1s;
+} */
+.header{
+    grid-area: header;
 }
 
+.navbar-brand img{
+    width: 330px;
+    height: 100px;
+}
+
+.background-nav {
+    background-image: linear-gradient(black, darkgrey);
+}
+
+.nav-ul li a{
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.nav-link {
+    color:white;
+}
 
 /*-------------- MAIN--------------- */
 /* -------section---------- 1 */
@@ -64,7 +83,7 @@
 }
 
 .hero-section{
-    background-image:url(../images/familiafeliz.jpeg);
+    background-image:linear-gradient(rgba(0, 0, 0, 0.479), rgba(0, 0, 0, 0.5)), url(../images/familiafeliz.jpeg);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -88,8 +107,6 @@
 .hero-section h2{
     font-size: 25px;
     text-align: right;
-    margin-top: 15px;
-    margin-right: 190px;
     color: #5fa1bd;
 }
 
@@ -99,9 +116,16 @@
 
 /* ----------section-------- 2 */
 .productos-destacados{
-    background-color:hsla(208, 25%, 67%, 0.651);
+    background-color:hsla(210, 19%, 75%, 0.651);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
+/* .productos-destacados div div{
+    width: 283px;
+    border-radius: 10px;
+    border: solid rgba(109, 108, 108, 0.63);
+    box-shadow: 10px, 10px 44px -17px rgba(0,0,0,0.75);
+} */
 
 .productos-destacados h2{
     text-align: center;
@@ -110,11 +134,11 @@
 }
 
 .imagenes-productos {
-    /* height: 530px; */
     padding-top: 10px;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    padding-bottom: 15px;
 }
 
 .imagenes-productos a img{
@@ -128,8 +152,8 @@
 }
 
 .imagenes-productos>div img:hover{
-    /* transform: scale(1.1) */
-    animation: changeStyle 3s;
+    transform: scale(1.1)
+    /* animation: changeStyle 3s;
 }
 
 @keyframes changeStyle{
@@ -141,7 +165,7 @@
 }
     100%{
         border-radius:10px;
-}
+} */
 }
 
 .imagenes-productos p{
@@ -155,7 +179,7 @@
 
 /*-------- section contacto------- */
 .contacto{ 
-    background-color:hsla(208, 25%, 67%, 0.651) ;
+    background-color:hsla(210, 19%, 75%, 0.651);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     width: 100%;
 }
@@ -251,17 +275,6 @@
     margin-right: 20px;
 } 
 
-/* .ig:hover a img{
-    transform: scale(1.4);
-}
-
-.fb:hover a img{
-    transform: scale(1.4);
-}
-
-.lkd:hover a img{
-    transform: scale(1.4);
-} */
 .redes-sociales>div:hover{
     transform: scale(1.4);
 }
